@@ -1,0 +1,64 @@
+.btn{
+    position: relative;
+    color:white;
+    text-align: center;
+    top:0px;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    transform: translateY(50,50);
+    background-image: linear-gradient(to right bottom,$color-blue-primary, $color-blue-secondary);
+    transition: all 0.2s ease ;
+  
+   
+  &:hover{
+    box-shadow: 0 0.5rem 0.4rem gainsboro;
+   // transform: translateY(-50px,-50px);
+    top:-5px
+    
+  }
+  
+  }
+  
+  .a{
+    text-decoration: none;
+  }
+
+  .btn-card{
+    position: relative;
+    color:white;
+    text-align: center;
+    top:0px;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    transform: translateY(50,50);
+    
+    transition: all 0.2s ease ;
+    &-blue{
+      background-image: linear-gradient(to left top, 
+      rgba($color-blue-primary, 0.85), 
+      rgba($color-blue-secondary, 0.85));
+    }
+    &-green{
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-green-primary, .85), 
+      rgba($color-green-secondary, .85));
+    }
+    &-orange{
+      background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary-light, .85), 
+            rgba($color-secondary-dark, .85));
+    }
+   
+  
+   
+  &:hover{
+   // box-shadow: 0 0.5rem 0.4rem gainsboro;
+   // transform: translateY(-50px,-50px);
+    top:-5px
+    
+  }
+  
+  }
+  
+  
+  

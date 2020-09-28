@@ -1,0 +1,108 @@
+
+.header{
+    margin-top: -75px;
+    display: grid;
+    grid-template-columns: [image-s] 40% [image-e text-s] 60% [text-e];
+    @include respond(tab-land) { // width < 1200?
+        grid-template-columns: [image-s] 100% [image-e text-s] 0% [text-e];
+    }
+
+    &__image{
+        grid-column: image-s/image-e;
+        background-size: cover;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(rgb(13, 146, 128), 0.86),
+            rgba(rgb(33, 17, 172), 0.84)),
+            url(../img/side-header.jpg);
+
+    }
+    &__text{
+        grid-column: text-s/text-e;
+        position: relative;
+        overflow: hidden;
+       
+    }
+    
+}
+
+.text_box{
+position: absolute;
+top:30%;
+left: 10%;
+width:100%;
+letter-spacing: 0.2rem;
+font-family: 3rem;
+
+
+
+}
+.text_header{
+font-size: 7rem;
+display: block;
+margin-bottom: 15rem;
+background-size: cover;
+background-image: linear-gradient(
+    to right bottom,
+    rgba(rgb(13, 146, 128), 1.4),
+    rgba(rgb(33, 17, 172), 1.4));
+-webkit-background-clip: text;
+color: transparent;
+font-weight: 700;
+
+
+}
+.text_subheader{
+    text-transform: uppercase;
+    padding-left:2rem;
+}    
+
+
+.mobile{
+    
+ 
+    &_text_box{
+        visibility: hidden;
+      
+       
+        
+        @include respond(tab-land) { // width < 1200?
+            visibility: visible;
+            width: 400px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        @include respond(tab-port) {
+            left: 40%;
+        }
+        @include respond(phone) {
+            left: 75%;
+        }
+        
+        }
+        &_text_header{
+            @include respond(tab-land) { // width < 1200?
+            
+                font-size: 5em;
+                font-weight: 10;
+        display: inline-block;
+        margin-bottom: 1rem;
+        background-size: cover;
+        color: white;
+      
+            }
+       
+        
+        
+        }
+        &_text_subheader{
+            @include respond(tab-land) { // width < 1200?
+                text-transform: uppercase;
+                color: white;
+            }
+          
+        }    
+}

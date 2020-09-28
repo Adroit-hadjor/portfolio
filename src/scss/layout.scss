@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+} 
+
+html{
+  @include respond(tab-land) { // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+}
+
+@include respond(tab-port) { // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+}
+
+@include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+}
+}
+
+
+
+.layout{
+  height:100%;
+  //background-image: linear-gradient(to left top,crimson,rgb(179, 35, 59) ); */
+  display: grid;
+  grid-template-rows: [nav-s] 15vh [nav-e content-s] 110vh [content-e about-s] 130vh [about-e qualification-s] 120vh [qualification-e];
+
+  @include respond(tab-land) { // width < 1200?
+    grid-template-rows: [nav-s] 10vh [nav-e content-s] 60vh [content-e about-s] 350vh [about-e qualification-s] 60vh [qualification-e];
+}
+}
+.navbar{
+  grid-row: nav-s/nav-e;
+  width: 100vw;
+}
+
+
+.header{
+   grid-row:content-s/content-e;
+}
+
+.section-about{
+  position: relative;
+  grid-row:about-s/about-e;
+  background-color: rgba(66, 62, 62, 0.055);
+  padding: 0 5rem;
+  @include respond(tab-land) { // width < 1200?
+    padding: 0 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+   
+
+  }
+
+ 
+  //background-color: yellow;
+}
+
+.section-qualifications{
+  position: relative;
+  padding: 25rem 0;
+  grid-row:qualification-s/qualification-e;
+  //background-color:yellow;
+}
