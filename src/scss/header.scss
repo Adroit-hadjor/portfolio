@@ -6,7 +6,7 @@
     grid-template-columns: [image-s] 40% [image-e text-s] 60% [text-e];
     @include respond(tab-land) { // width < 1200?
         grid-template-columns: [image-s] 100% [image-e text-s] 0% [text-e];
-        margin-top: -20px;
+        margin-top: -15px;
 
     }
 
