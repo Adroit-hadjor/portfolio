@@ -39,7 +39,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     } 
 
     @if $breakpoint == phones {
-        @media only screen and (max-width: 24.5rem) { @content };    //600px
+        @media only screen and (max-width: 34.5rem) { @content };    //600px
     }
     
      @if $breakpoint == tab-port {
