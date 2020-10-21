@@ -69,7 +69,7 @@ html{
           
               @include respond(tab-land) { // width < 1200?
                 
-                grid-template-rows: 10vh  60vh  0vh  70vh 50vh 30vh ;
+                grid-template-rows: 10vh  60vh  0vh  70vh 60vh 30vh ;
                 grid-template-columns: 1fr ;
                 grid-template-areas:  
                             "nav"
@@ -81,7 +81,7 @@ html{
             }
 
             @include respond(tab-port) { // width < 1200?
-              grid-template-rows: 10vh  45vh  0vh  120vh 50vh 30vh;
+              grid-template-rows: 10vh  45vh  0vh  120vh 60vh 30vh;
             }      
 
 }
