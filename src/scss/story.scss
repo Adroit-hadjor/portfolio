@@ -1,25 +1,36 @@
 .skewed-card{
-    width: 100vw;
+    width: 80vw;
+    
+    @include respond(tab-land) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @include respond(phones) {
+        width: 90vw;
+        height: 5%;
+    }
 }
 
 .story {
-    width: 65%;
-    margin: 0 auto;
+  
+    //margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .6);
+    background-color: rgba($color-blue-secondary, .6);
+    color:white;
     border-radius: 3px;
     padding: 6rem;
-    padding-left: 9rem;
+    //padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
     @include respond(tab-land) { // width < 1200?
-       
-          padding: 5rem;
+   
           transform: skewX(0deg);
           width: 40%;
+          } 
 
-       } 
+          
 
    
 
@@ -40,6 +51,10 @@
             border-radius: none;
         }
 
+        @include respond(tab-land) { // width < 1200?
+            transform: translateX(-3rem) skewX(0);
+        }
+
       /*   @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
         } */
@@ -54,10 +69,10 @@
 
     &__text {
         transform: skewX(12deg);
-
-        /* @include respond(phone) {
+       
+        @include respond(tab-land) {
             transform: skewX(0);
-        } */
+        } 
     }
 
     &__caption {

@@ -7,61 +7,202 @@
 } 
 
 html{
+  
+  font-size: 90%;
+
+
+ 
   @include respond(tab-land) { // width < 1200?
-    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    font-size: 90.25%; //1 rem = 9px, 9/16 = 50%
+    //display: none;
+
 }
 
-@include respond(tab-port) { // width < 900?
-    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+ 
+
+  @include respond(tab-port) { // width < 900?
+    font-size: 65%; //1 rem = 8px, 8/16 = 50%
+  
 }
+
+@include respond(phones) { // width < 900?
+  font-size: 64%; //1 rem = 8px, 8/16 = 50%
+
+}
+
+ 
+
+
+
+
+
+
+
 
 @include respond(big-desktop) {
     font-size: 75%; //1rem = 12, 12/16
 }
+
+
 }
 
 
 
 .layout{
-  height:100%;
+
+  position: absolute;
+  width: 100%;
+  height:auto;
   //background-image: linear-gradient(to left top,crimson,rgb(179, 35, 59) ); */
   display: grid;
-  grid-template-rows: [nav-s] 15vh [nav-e content-s] 110vh [content-e about-s] 130vh [about-e qualification-s] 120vh [qualification-e];
+  grid-template-rows:  10vh  110vh 108vh 0vh 90vh 60vh ;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:  
+              "nav nav nav"
+              "header header header"
+              "cards cards cards"
+              "mobile_cards mobile_cards mobile_cards"
+              "story story story"
+              "footer footer footer";
+              
+  
+          
+              @include respond(tab-land) { // width < 1200?
+                
+                grid-template-rows: 10vh  60vh  0vh  70vh 50vh 30vh ;
+                grid-template-columns: 1fr ;
+                grid-template-areas:  
+                            "nav"
+                            "header"
+                            "cards"
+                            "mobile_cards"
+                            "story"
+                            "footer";
+            }
 
-  @include respond(tab-land) { // width < 1200?
-    grid-template-rows: [nav-s] 10vh [nav-e content-s] 60vh [content-e about-s] 350vh [about-e qualification-s] 60vh [qualification-e];
-}
+            @include respond(tab-port) { // width < 1200?
+              grid-template-rows: 10vh  45vh  0vh  120vh 50vh 30vh;
+            }      
+
 }
 .navbar{
-  grid-row: nav-s/nav-e;
-  width: 100vw;
+ 
+  grid-area: nav;
+ 
 }
 
 
 .header{
-   grid-row:content-s/content-e;
+  grid-area:header;
+  width: 100%;
 }
 
 .section-about{
-  position: relative;
-  grid-row:about-s/about-e;
+  
+ // position: relative;
+  grid-area: cards;
   background-color: rgba(66, 62, 62, 0.055);
-  padding: 0 5rem;
+  //display: grid;
+  //padding: 0 5rem;
+  width: 100%;
   @include respond(tab-land) { // width < 1200?
     padding: 0 0rem;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
-   
-
   }
+  
 
  
   //background-color: yellow;
 }
 
-.section-qualifications{
-  position: relative;
-  padding: 25rem 0;
-  grid-row:qualification-s/qualification-e;
-  //background-color:yellow;
+.section-about-mobile{
+  background-color: #f8f8f8;
+  display: none;
+  grid-area: mobile_cards;
+  @include respond(tab-land) { 
+  display: flex;// width < 1200?
+  grid-area: mobile_cards;
+   flex-direction: row;
+   justify-content:space-around ; 
+   align-items: center;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    justify-content:space-around ; 
+    align-items: center;
+  }
 }
+
+.section-qualifications{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: story;
+  position: relative;
+  //padding: 25rem 0;
+  //background-color:yellow;
+  @include respond(tab-land) { // width < 1200?
+    
+    display: flex;
+  
+  
+  }
+}
+
+.footer{
+  grid-area: footer;
+  background-image: linear-gradient(to right bottom, 
+  rgba($color-blue-primary, .85), 
+  rgba($color-blue-secondary, .85));
+  color:white;
+  display: grid;
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3rem;
+ 
+}
+
+.copyright{
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 5rem;
+}
+
+@supports ( -moz-appearance:none ){
+  /* Add firefox CSS code here */
+/*  html{ font-size:200%;}
+
+ 
+ @include respond(tab-land) { // width < 1200?
+  font-size: 70.25%; //1 rem = 9px, 9/16 = 50%
+  //display: none;
+
+}
+
+
+
+@include respond(tab-port) { // width < 900?
+  font-size: 40%; //1 rem = 8px, 8/16 = 50%
+
+}
+
+@include respond(phones) { // width < 900?
+font-size: 40%; //1 rem = 8px, 8/16 = 50%
+
+} */
+}
+
+
+  
+

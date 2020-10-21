@@ -34,6 +34,7 @@ function App() {
        </div>
      </div>
      </div>
+     
     <div className="section-about">
         <div className="card-container">
            <div className="card card__1">
@@ -89,7 +90,7 @@ function App() {
                                         <p className="card__price-only">Only</p>
                                         <p className="card__price-value">$12/hr</p>
                                     </div>
-                                    <a href="#popup" className="btn-card btn-card-green">Book now!</a>
+                                    <a href="#popup" className="btn-card btn-card-blue">Book now!</a>
                                 </div>
                             </div>
     </div>
@@ -99,7 +100,7 @@ function App() {
                                     &nbsp;
                                 </div>
                                 <h4 className="card__heading">
-                                    <span className="card__heading-span card__heading-span--3">Secure Database </span>
+                                    <span className="card__heading-span card__heading-span--3">The Secured Database </span>
                                 </h4>
                                 <div className="card__details">
                                     <ul>
@@ -117,12 +118,65 @@ function App() {
                                         <p className="card__price-only">Only</p>
                                         <p className="card__price-value">$10/hr</p>
                                     </div>
-                                    <a href="#popup" className="btn-card btn-card-orange">Book now!</a>
+                                    <a href="#popup" className="btn-card btn-card-blue">Book now!</a>
                                 </div>
                             </div>
     </div>
     </div>
     </div>
+   <div className="section-about-mobile">
+                <div className="mobileCard mobileCard__1">
+                        <div className="card__header card__header_1">
+                            <h4 className="mobile_header">Want Mobile Apps</h4>
+                        </div>  
+                        <div className="card__detailsMobile">
+                             <ul>
+                                <li>Quick Mobile development</li>
+                                <li>Beautiful UI</li>
+                                <li>Best Security</li>
+                                <li>Responsive app</li>
+                                <li>Fast search options</li>
+                            </ul>
+                    </div>
+                    <div className="card__footer">
+                         <h4 className="mobile_footer">10$/hr</h4>
+                    </div>
+                </div>
+                <div className="mobileCard mobileCard__1">
+                        <div className="card__header card__header_1">
+                            <h4 className="mobile_header">Want Websites</h4>
+                        </div>  
+                        <div className="card__detailsMobile">
+                        <ul>
+                                        <li>Quick Mobile development</li>
+                                        <li>Beautiful UI</li>
+                                        <li>Best Security</li>
+                                        <li>Responsive app</li>
+                                        <li>Fast search options</li>
+                                    </ul>
+                    </div>
+                    <div className="card__footer">
+                         <h4 className="mobile_footer">10$/hr</h4>
+                    </div>
+                </div>
+                <div className="mobileCard mobileCard__1">
+                        <div className="card__header card__header_1">
+                            <h4 className="mobile_header">Database and Machine Learning</h4>
+                        </div>  
+                        <div className="card__detailsMobile">
+                        <ul>
+                                        <li>Secured database</li>
+                                        <li>Fast Dataresponse</li>
+                                        <li>Best Security</li>
+                                        <li>Ensure Safe Backup</li>
+                                        
+                                    </ul>
+                    </div>
+                    <div className="card__footer">
+                         <h4 className="mobile_footer">10$/hr</h4>
+                    </div>
+                </div>
+   </div>
     <section className="section-qualifications">
         <div className="bg-video">
             <video   className="bg-video__content" autoPlay muted loop >
@@ -149,7 +203,20 @@ function App() {
         </div>
     </section>
     <div className="footer">
-
+        <div className="socials">
+            <ul>
+                <li>Phone no : +233244215905</li>
+                <li>Email : ofoehadjor@gmail.com</li>
+                <li>Twitter : https://twitter.com/__hadzor</li>
+                <li>LinkedIn : www.linkedin.com/in/ofoe-hadjor-b2872a1a0</li>
+                <li>P.O.BOX LG 29</li>
+                <li>ACCRA</li>
+               
+            </ul>
+        </div>
+        <div className="copyright">
+        <small>&copy; Copyright 2020, aCE </small>
+        </div>
     </div>
     </div>
   );

@@ -1,0 +1,63 @@
+.mobileCard{
+    color: white;
+    background-color: white;
+    width: 25%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond(tab-port) {
+   height: 30%;
+   width: 50%;
+    }
+    @include respond(phones) {
+        
+       
+    }
+    
+ul{
+    list-style: none;
+    padding: 0rem 2rem;
+
+}
+li{
+    padding: 0.5rem;
+       &:not(:last-child) {
+                     
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+}
+   
+}
+
+
+.card__header{
+   
+    height:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-blue-primary, .85), 
+    rgba($color-blue-secondary, .85));
+
+}
+
+.card__detailsMobile{
+    background-color: white;
+    text-align: center;
+    color: black;
+    
+}
+
+.card__footer{
+    
+    height:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-blue-primary, .85), 
+    rgba($color-blue-secondary, .85));
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}

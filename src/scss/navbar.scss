@@ -2,23 +2,36 @@
 $animate: all 0.2s ease-in-out;
 
 .navbar{
+  
   background-color: white;
   user-select: none;
   text-decoration: none;
   font-size: 1.2rem;
-  height: 12vh;
+  height: 10vh;
   width: 100%;
   z-index: 5000;
+  display: grid;
+  position: fixed;
 
-  @include respond(tab-land) { // width < 1200?
-    height: 6vh;
-}
+
+  
+  @include respond(tab-land) { 
+    height: 7vh;
+    font-size: 1rem;
+    //display: none;
+  }
+  
+
+
+
+
+
+
  
  
  //background-image:linear-gradient(to right bottom ,yellow, orange);
 
-  display: grid;
-  position: fixed;
+  
   &::after{
       content:"";
       width: 100%;
@@ -32,14 +45,14 @@ $animate: all 0.2s ease-in-out;
 
   grid-template-columns:[menu-s]5% [menu-e]68%
                         [portfolio-s]5%[portfolio-e]5%
-                        [about-s] 5% [about-e] 2%
+                        7%
                         [hire-me-s] 5% [hire-me-e]
                         
   ;
   @include respond(tab-land) { // width < 1200?
     grid-template-columns:[menu-s]5% [menu-e]1fr
-                        [portfolio-s]5%[portfolio-e]2%
-                        [hire-me-s] 10% [hire-me-e]
+                        [portfolio-s]0%[portfolio-e]8%
+                        [hire-me-s] 10% [hire-me-e]10%
                         
   ;
 }
@@ -50,7 +63,9 @@ $animate: all 0.2s ease-in-out;
    &__menu{
    position: relative;
     width: 7rem;
-    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
      //background-color: blue;
     grid-column: menu-s/menu-e;
     border-right: 1px solid rgba(17,17,17,0.3) ;
@@ -62,11 +77,16 @@ $animate: all 0.2s ease-in-out;
      width: 8rem;
     align-self: center;
     justify-self: center;
-   // margin-left: 5%;
+    margin-left: 5%;
     //background-color: red;
     grid-column: portfolio-s/portfolio-e;
     position: relative;
     transition: $animate;
+    color: black;
+    @include respond(tab-land) { // width < 1200?
+    color: white;
+    display: none;
+  }
     &:before{
       content: "";
       position: absolute;
@@ -78,6 +98,9 @@ $animate: all 0.2s ease-in-out;
       transition-duration: 0.75s;
       opacity: 0;
       background-color: darken(blue,5%);
+      @include respond(tab-land) { // width < 1200?
+        background-color: white;
+      }
       left: 50%;
     }
 
@@ -93,6 +116,10 @@ $animate: all 0.2s ease-in-out;
       opacity: 0;
       background-color: darken(blue,5%);
       right: 50%;
+      @include respond(tab-land) { // width < 1200?
+        background-color: white;
+        display: none;
+      }
     }
 
     &:active,
@@ -117,7 +144,7 @@ $animate: all 0.2s ease-in-out;
   &__hire-me{
     align-self: center;
     width: 5rem;
-    height: 2rem;
+    height: 0.5m;
     justify-self: center;
     text-align: center;
    // margin-left: 5%;
@@ -134,14 +161,15 @@ $animate: all 0.2s ease-in-out;
 }
 .fa-bars{
   position: absolute;
-  margin-left: 5%;
-  top:1.4rem;
-  left:2rem;
+  //margin-left: 5%;
+ // top:1.4rem;
+ // left:2rem;
   height:2.5rem;
-  
+ 
+ align-self: center; 
   &:hover{
-    height: 2.8rem;
-    top:1.2rem;
+    height: 2.6rem;
+   
   }
 
 }
