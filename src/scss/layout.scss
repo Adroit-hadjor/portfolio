@@ -81,7 +81,7 @@ html{
             }
 
             @include respond(tab-port) { // width < 1200?
-              grid-template-rows: 10vh  45vh  0vh  120vh 60vh 30vh;
+              grid-template-rows: 10vh  45vh  0vh  120vh 80vh 30vh;
             }      
 
             @include respond(tab-phones) { // width < 1200?
