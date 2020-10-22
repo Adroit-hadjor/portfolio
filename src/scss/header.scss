@@ -2,11 +2,12 @@
 .header{
     margin-top: -5px;
     display: grid;
-    position: relative;
+  //  position: relative;
     grid-template-columns: [image-s] 40% [image-e text-s] 60% [text-e];
     @include respond(tab-land) { // width < 1200?
         grid-template-columns: [image-s] 100% [image-e text-s] 0% [text-e];
         margin-top: -55px;
+        
 
     }
 
@@ -20,6 +21,7 @@
             url(../img/side-header.jpg);
         
             @include respond(tab-land) {
+                
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -78,7 +80,7 @@ font-weight: 700;
         
         @include respond(tab-land) { // width < 1200?
             visibility: visible;
-            width: 400px;
+            width: 100%;
            display: flex;
            flex-direction: column;
            justify-content: center;
