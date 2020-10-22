@@ -210,7 +210,7 @@ function App() {
                 <li>Twitter : https://twitter.com/__hadzor</li>
                 <li>LinkedIn : www.linkedin.com/in/ofoe-hadjor-b2872a1a0</li>
                 <li>P.O.BOX LG 29</li>
-                <li>ACCRA</li>
+                <li>ACCRA.</li>
                
             </ul>
         </div>
