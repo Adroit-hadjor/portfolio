@@ -11,7 +11,7 @@ function App() {
      
      <div className="navbar"> 
         <div className="navbar__menu">
-            <img src={bird} class="fas fa-bars"alt=""/>
+            <img src={bird} className="fas fa-bars"alt=""/>
             {/* <i class="fas fa-bars"></i> */}
             </div>
         <div className="navbar__portfolio">Portfolio/CV </div>

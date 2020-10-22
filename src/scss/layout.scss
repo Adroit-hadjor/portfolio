@@ -120,6 +120,9 @@ html{
   background-color: #f8f8f8;
   display: none;
   grid-area: mobile_cards;
+
+ 
+
   @include respond(tab-land) { 
   display: flex;// width < 1200?
   grid-area: mobile_cards;
@@ -129,10 +132,14 @@ html{
   }
 
   @include respond(tab-port) {
+    display: flex;// width < 1200?
+    grid-area: mobile_cards;
     flex-direction: column;
     justify-content:space-around ; 
     align-items: center;
   }
+
+ 
 }
 
 .section-qualifications{
